@@ -43,8 +43,9 @@ def print_db(db):
 # получение информации от пользователя
 def get_data():
     print('Введите данные новой вакансии: ')
-    # проверка корректности ввода и преобразование в int (salary и bonus)
+    # проверка корректности ввода и преобразование в int (salary)
     correct_salary = lambda x: int(x) if x.isdigit() and int(x) >= 0 else None
+    # проверка корректности ввода type
     correct_type = lambda x: x if x == "удалённый" or x == "смешанный" or x == "в офисе" else None
     vacancy = {
         'name': input('Наименование вакансии: ').lower(),
